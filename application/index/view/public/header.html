@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>{$title}</title>
+
+	<link rel="stylesheet" href="__PUBLIC__css/common.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/index.css">
+	<script type="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__js/common.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__js/index.js" ></script>
+	<script type="text/javascript" src="__PUBLIC__js/banner.js" ></script>
+
+</head>
+<body>
+	<div id="header">
+		<div class="header_top">
+			<div class="container">
+			
+					{if condition="session('?uname')"}
+				<div class="left">
+					<span>你好，欢迎来翰娜</span>
+					<span><a href="{:url('Member/user')}">{$Think.session.uname}</a></span>
+					<span><a href="{:url('Member/logout')}">退出</a></span>
+					
+				</div>
+				{else /}
+				<div class="left">
+					<span>你好，欢迎来翰娜</span>
+					<span>请<a href="{:url('Member/login')}">登陆</a></span>
+					<span><a href="{:url('Member/register')}">免费注册</a></span>
+				</div>
+				
+				{/if}
+				<div class="right">
+					<ul >
+						<li>
+							<a href="user.html"><img src="__PUBLIC__images/header01.png"/>我的商城</a>
+						</li>
+						<li><a href="#"><img src="__PUBLIC__images/header02.png"/>我的关注</a></li>
+						<li><a href="#"><img src="__PUBLIC__images/header03.png"/>收藏夹</a></li>
+						<li class="dropdown">
+							<a href="#"><img src="__PUBLIC__images/header04.png"/>网站导航<img src="__PUBLIC__images/show_list04.png" alt="show_list04" /></a>
+							
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="shop_list.html">商品列表</a></li>
+								<li><a href="user.html">用户主页</a></li>
+								<li><a href="comments.html">用户评论</a></li>
+								<li><a href="address.html">地址详情</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+				
+			</div>
+		</div>
+				
+		<div class="header_middle clear">
+			<div class="container">
+				<div class="logo">
+					<a href="{:url('index/index')}">
+						<img src="__PUBLIC__images/index_logo.jpg" alt="index_logo" />
+					</a>
+				</div>
+				<div class="search">
+					<form for="">
+						<input type="text"placeholder="请输入关键字" />
+						<button type="button">搜索</button>
+					</form>
+					<ul>
+						<li><a href="pro_details.html">男沐浴露</a><span></span></li>					
+						<li><a href="shop_list.html">力士沐浴露 </a><span></span></li>			
+						<li><a href="shop_list.html">沐浴露家庭装 </a><span></span></li>
+						<li><a href="shop_list.html">多芬沐浴露  </a><span></span></li>
+						<li><a href="shop_list.html">六神沐浴露</a><span></span></li>
+						<li><a href="shop_list.html">阿迪达斯沐浴</a></li>
+					</ul>
+				</div>
+				<div class="shop">
+					<a href="shop_cart.html">
+						<img src="__PUBLIC__images/index_header05.jpg" alt="/index_header05" />
+						我的购物车<span class="badge">2</span>
+					</a>
+				</div>
+			</div>	
+		</div>
+		<div class="header_bottom">
+			<div class="container">	
+				<div class="all">
+					<a href="javascript:;">全部商品</a>
+					<ul >				
+						<li><a href="shop_list.html">清洁</a></li>
+						<li><a href="shop_list.html">保湿</a></li>
+						<li><a href="shop_list.html">滋润</a></li>
+						<li><a href="shop_list.html">清凉舒爽</a></li>
+						<li><a href="shop_list.html">补水</a></li>
+						<li><a href="shop_list.html">清爽</a></li>
+						<li><a href="shop_list.html">深层清洁</a></li>
+						<li><a href="shop_list.html">舒缓肌肤</a></li>
+					</ul>
+				</div>
+				<div class="nav">
+					<ul>
+						{volist name="clist" id="cv"}
+						<li>
+							
+							<a href="shop_list.html">{$cv.name}</a>
+							
+						</li>
+						{/volist}
+						<!--<li>
+							<a href="shop_list.html">健身</a>
+									
+						</li>
+						<li>
+							<a href="shop_list.html">花味</a>
+							
+						</li>
+						<li>
+							<a href="shop_list.html">磨砂</a>
+							
+						</li>
+						<li>
+							<a href="shop_list.html">沐浴露</a>
+							
+						</li>
+						<li>
+							<a href="shop_list.html">牛奶味</a>
+							
+						</li>
+						<li>
+							<a href="shop_list.html">香皂</a>
+							
+						</li>
+						<li>
+							<a href="shop_list.html">驱蚊止痒</a>
+						
+						</li>
+						<li>
+							<a href="shop_list.html">泡澡</a>		
+						</li>					
+						<li>
+							<a href="shop_list.html">沐浴套装</a>
+						</li>
+						<li>
+							<a href="shop_list.html">果味</a>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+		</div>				
+	</div>
